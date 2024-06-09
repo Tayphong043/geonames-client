@@ -45,24 +45,33 @@ $country_name = $country->countryName;
 $country_languages = $country->languages;
 ```
 
+## Client Options
+
+### Change API URL
+
+```php
+$g = new GeoNamesClient('username', null, ['apiUrl' => 'https://custom-premium.geonames.org']);
+```
+
 ## Why?
 
 This library will allow you to get better insights into the world.
 
-As a developer and a multi-lingual speaker I've always felt that localization was put
-on last priority since it was so time consuming and error-prone.
+As a developer and a multilingual speaker I've always felt that localization
+was put on last priority since it was so time-consuming and error-prone.
 
-Getting statistics for each country is a painful process that requires understanding the
-different ISO standards, and even then you're still left to piece the puzzle together yourself.
+Getting statistics for each country is a painful process that requires
+understanding the different ISO standards, and even then you're still left to
+piece the puzzle together yourself.
 
-Luckily, GeoNames have been collecting statistical data about the world for the past
-few decades and offers that data via their API.
+Luckily, GeoNames have been collecting statistical data about the world for the
+past few decades and offers that data via their API.
 
 The aim of this library is to provide a single source of truth for
 country [(ISO-3166)](https://en.wikipedia.org/wiki/ISO_3166),
 language [(ISO-639-1)](https://en.wikipedia.org/wiki/ISO_639-1),
-and other locale related statistical data, so that other developers can write better software
-which is up-to-date with the latest changes in the world.
+and other locale related statistical data, so that other developers can write
+better software which is up-to-date with the latest changes in the world.
 
 ## Installation
 
@@ -72,7 +81,8 @@ If you're using Composer to manage dependencies:
 composer require aternus/geonames-client
 ```
 
-Then, after running `composer update`, you can load the class using Composer's autoloading:
+Then, after running `composer update`, you can load the class using Composer's
+autoloading:
 
 ```php
 require 'vendor/autoload.php';
@@ -92,11 +102,12 @@ use GeoNames\Client as GeoNamesClient;
 
 ## Other Useful Libraries
 
-Please make sure to implement some kind of a cache mechanism in order to save yourself
-time, bandwidth and be respectful to GeoNames for providing all that data for free.
+Please make sure to implement some kind of cache mechanism in order to save
+yourself time, bandwidth and be respectful to GeoNames for providing all that
+data for free.
 
-If you're making heavy use of the statistical data, you can subscribe to the their
-[Premium Data](http://www.geonames.org/products/premium-data.html) plan.
+If you're making heavy use of the statistical data, you can subscribe to
+their [Premium Data](http://www.geonames.org/products/premium-data.html) plan.
 
 ## License
 
